@@ -1,0 +1,34 @@
+
+# Dependências e ambientes virtuais
+node_modules/
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Builds e caches
+dist/
+build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.vite/
+
+# Logs
+*.log
+
+# Configurações locais
+.vscode/
+.idea/
+
+# Dados locais, backups e arquivos de banco
+mongodb-data/
+data/
+backups/
+*.dump
+*.bson

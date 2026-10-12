@@ -1,0 +1,246 @@
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  color: #ffffff;
+  background:
+    radial-gradient(ellipse at 15% 15%, #275c49 0%, transparent 45%),
+    linear-gradient(145deg, #173c30, #102b22);
+}
+
+.brand-content {
+  width: 100%;
+  max-width: 480px;
+}
+
+.brand-icon,
+.mobile-brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 18px;
+  color: #173c30;
+  background: #d7f2df;
+}
+
+.brand-label,
+.form-eyebrow {
+  display: block;
+  margin-top: 42px;
+  color: #a9d8bd;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-content h1 {
+  margin: 20px 0;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.brand-content > p {
+  max-width: 390px;
+  color: #c5d6ce;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.brand-footer {
+  margin-top: 100px;
+  color: #a9c4b7;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.login-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.mobile-brand-icon {
+  display: none;
+}
+
+.form-eyebrow {
+  margin-top: 0;
+  color: #34775b;
+}
+
+.login-form-container h2 {
+  margin: 14px 0 10px;
+  color: #172a21;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.form-description {
+  margin: 0 0 36px;
+  color: #77827c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-container label {
+  margin: 0 0 9px;
+  color: #293a31;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  margin-bottom: 24px;
+  padding: 0 15px;
+  border: 1px solid #dce5df;
+  border-radius: 9px;
+  color: #87958c;
+  background: #ffffff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #34775b;
+  box-shadow: 0 0 0 3px rgb(52 119 91 / 10%);
+}
+
+.input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  color: #24372c;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+}
+
+.input-wrapper input::placeholder {
+  color: #a4aea8;
+}
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  color: #87958c;
+  background: transparent;
+  cursor: pointer;
+}
+
+.login-button {
+  min-height: 52px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 9px;
+  color: #ffffff;
+  background: #20563f;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.login-button:hover {
+  background: #17442f;
+}
+
+.login-button:active {
+  transform: scale(0.99);
+}
+
+.login-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: #89948d;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    display: none;
+  }
+
+  .login-form-section {
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+
+  .mobile-brand-icon {
+    display: inline-flex;
+    margin-bottom: 32px;
+  }
+
+  .form-eyebrow {
+    margin-top: 0;
+  }
+
+  .login-form-container h2 {
+    font-size: 29px;
+  }
+
+  .login-error,
+  .login-success {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .login-error {
+    color: #b42318;
+    background: #fef3f2;
+    border: 1px solid #fecdca;
+  }
+
+  .login-success {
+    color: #166534;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+  }
+
+  .login-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
