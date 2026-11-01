@@ -1,5 +1,11 @@
+
+# ==========================================
+# SISTEMA DE ESTOQUE E PDV
+# React + Vite + FastAPI + MongoDB
+# ==========================================
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +13,103 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# ==========================================
+# FRONTEND - React / Vite
+# ==========================================
+
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
 *.local
 
-# Editor directories and files
+# ==========================================
+# BACKEND - Python / FastAPI
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+*.egg-info/
+.eggs/
+build/
+
+# ==========================================
+# VARIAVEIS DE AMBIENTE / SEGREDOS
+# ==========================================
+
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ==========================================
+# BANCO DE DADOS / BACKUPS
+# ==========================================
+
+dump/
+backups/
+*.sqlite
+*.sqlite3
+*.db
+*.bson
+*.archive
+
+# ==========================================
+# EDITORES / SISTEMA OPERACIONAL
+# ==========================================
+
 .vscode/*
 !.vscode/extensions.json
-.idea
+
+.idea/
 .DS_Store
+Thumbs.db
+Desktop.ini
+
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+
+# ==========================================
+# ARQUIVOS TEMPORARIOS
+# ==========================================
+
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+# ==========================================
+# TESTES E RELATORIOS GERADOS
+# ==========================================
+
+playwright-report/
+test-results/
+
+# Scripts locais de diagnóstico
+/backend/consultar_caixa.py
+/backend/diagnostico_caixa.py

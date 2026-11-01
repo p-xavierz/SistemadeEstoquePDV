@@ -33,6 +33,16 @@ async def criar_venda(
 
     async with await client.start_session() as session:
         async with session.start_transaction():
+            caixa = await database.caixas.find_one(
+                {"status": "aberto"},
+                session=session,
+            )
+
+            if not caixa:
+                raise HTTPException(
+                    status_code=409,
+                    detail="Abra o caixa antes de registrar uma venda.",
+                )
             # Primeiro, valida os produtos e calcula os valores.
             for item in dados.itens:
                 produto = await database.produtos.find_one(
@@ -153,6 +163,7 @@ async def criar_venda(
 
             venda = {
                 "id": venda_id,
+                "caixa_id": caixa["id"],
                 "itens": itens_venda,
                 "subtotal": subtotal_geral,
                 "desconto": desconto,

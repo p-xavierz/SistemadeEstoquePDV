@@ -13,6 +13,13 @@ async def iniciar_conexao():
     await client.admin.command("ping")
     await database.users.create_index("email", unique=True)
 
+    await database.caixas.create_index(
+        "status",
+        unique=True,
+        partialFilterExpression={"status": "aberto"},
+        name="unico_caixa_aberto",
+    )
+
 
 async def verificar_conexao():
     await client.admin.command("ping")

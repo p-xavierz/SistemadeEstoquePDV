@@ -42,6 +42,11 @@ const itensMenu = [
     caminho: "/pdv",
     icone: ShoppingCart,
   },
+  {
+    nome: "Controle de Caixa",
+    caminho: "/caixa",
+    icone: Wallet,
+  },
 ];
 
 const titulos = {

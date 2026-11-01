@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routers.produtos import router as produtos_router
 from app.routers.movimentacoes import router as movimentacoes_router
 from app.routers import vendas
+from app.routers.caixa import router as caixa_router
 
 from app.database.connection import (
     iniciar_conexao,
@@ -46,6 +47,7 @@ app.include_router(categorias_router)
 app.include_router(produtos_router)
 app.include_router(movimentacoes_router)
 app.include_router(vendas.router)
+app.include_router(caixa_router)
 
 @app.get("/")
 async def inicio():

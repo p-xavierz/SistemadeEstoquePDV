@@ -1,0 +1,490 @@
+.caixa-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px;
+  color: #172033;
+}
+
+.caixa-page * {
+  box-sizing: border-box;
+}
+
+.caixa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.caixa-eyebrow,
+.caixa-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.caixa-header h1 {
+  margin: 7px 0;
+  font-size: clamp(25px, 3vw, 32px);
+  letter-spacing: -0.8px;
+}
+
+.caixa-header p,
+.caixa-panel-title p,
+.caixa-status-info p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.caixa-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.caixa-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.caixa-button-primary {
+  color: #fff;
+  background: #1d4ed8;
+}
+
+.caixa-button-primary:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+.caixa-button-secondary {
+  color: #334155;
+  background: #fff;
+  border-color: #dbe2ea;
+}
+
+.caixa-button-secondary:hover:not(:disabled) {
+  background: #f8fafc;
+}
+
+.caixa-button-danger {
+  color: #fff;
+  background: #b91c1c;
+}
+
+.caixa-button-danger:hover:not(:disabled) {
+  background: #991b1b;
+}
+
+.caixa-alerta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.caixa-alerta-erro {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.caixa-alerta-sucesso {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.caixa-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 35px 0;
+  color: #64748b;
+}
+
+.caixa-status-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.caixa-status-icon,
+.caixa-metrica-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.caixa-status-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.caixa-status-info h2 {
+  margin: 5px 0 0;
+  font-size: 20px;
+}
+
+.caixa-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-aberto {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-fechado {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.caixa-panel {
+  min-width: 0;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.caixa-panel-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #1d4ed8;
+}
+
+.caixa-panel-title > div {
+  color: #172033;
+}
+
+.caixa-panel-title h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.caixa-abertura-panel {
+  max-width: 650px;
+}
+
+.caixa-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.caixa-form label {
+  margin-top: 5px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.caixa-form input,
+.caixa-form select {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.caixa-form input:focus,
+.caixa-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 12%);
+}
+
+.caixa-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.caixa-metricas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.caixa-metrica {
+  min-width: 0;
+  padding: 19px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.caixa-metrica-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+}
+
+.caixa-metrica-icon.metrica-entrada {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.caixa-metrica-icon.metrica-saida {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.caixa-metrica > span,
+.caixa-vendas-grid span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.caixa-metrica > strong {
+  display: block;
+  overflow-wrap: anywhere;
+  margin: 8px 0;
+  font-size: clamp(19px, 2vw, 25px);
+  letter-spacing: -0.5px;
+}
+
+.caixa-metrica > small,
+.caixa-total-vendas small {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.caixa-vendas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.caixa-vendas-grid > div {
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.caixa-vendas-grid strong {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 8px;
+  color: #172033;
+  font-size: 19px;
+}
+
+.caixa-vendas-grid .caixa-total-vendas {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.caixa-duas-colunas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 22px;
+}
+
+.caixa-fechamento-resumo {
+  padding: 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.caixa-fechamento-resumo span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.caixa-fechamento-resumo strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 25px;
+}
+
+.caixa-fechamento-resumo p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.caixa-vazio {
+  padding: 18px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.caixa-tabela-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.caixa-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.caixa-tabela th {
+  padding: 13px 12px;
+  color: #64748b;
+  background: #f8fafc;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.caixa-tabela td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eef2f7;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.caixa-tabela tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.caixa-tipo {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tipo-entrada {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.tipo-saida {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.valor-positivo {
+  color: #15803d !important;
+  font-weight: 700;
+}
+
+.valor-negativo {
+  color: #b91c1c !important;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .caixa-metricas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .caixa-vendas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .caixa-page {
+    padding: 18px 14px;
+  }
+
+  .caixa-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .caixa-status-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 17px;
+  }
+
+  .caixa-status-info {
+    flex-basis: calc(100% - 70px);
+  }
+
+  .caixa-status-badge {
+    margin-left: 64px;
+  }
+
+  .caixa-panel {
+    padding: 17px;
+  }
+
+  .caixa-metricas,
+  .caixa-duas-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .caixa-vendas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .caixa-metrica {
+    padding: 16px;
+  }
+
+  .caixa-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .caixa-vendas-grid {
+    grid-template-columns: 1fr;
+  }
+}

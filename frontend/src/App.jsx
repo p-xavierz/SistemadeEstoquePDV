@@ -16,6 +16,7 @@ import Produtos from "./pages/Produtos";
 import Categorias from "./pages/Categorias";
 import Movimentacoes from "./pages/Movimentacoes";
 import PDV from "./pages/PDV";
+import Caixa from "./pages/Caixa";
 
 function RotaProtegida() {
   const { usuario, carregandoAuth } = useAuth();
@@ -52,6 +53,8 @@ function App() {
             <Route path="/movimentacoes" element={<Movimentacoes />} />
 
             <Route path="/pdv" element={<PDV />} />
+
+            <Route path="/caixa" element={<Caixa />} />
           </Route>
 
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
